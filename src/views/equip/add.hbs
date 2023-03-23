@@ -1,0 +1,97 @@
+<div class="row text-center pt-2">
+    <h2 class="h1">Inventario de equipos</h2>
+</div>
+
+<form action="/equipos/add" method="post" class="container-fluid pt-3">
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="area" class="form-control bg-secondary text-white" id="area" placeholder="Area">
+            <label for="area" class="text-white">Area:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="responsable" class="form-control bg-secondary text-white" id="responsable" placeholder="Responsable">
+            <label for="responsable" class="text-white">Responsable:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="date" class="form-control bg-secondary text-white" name="fecha" placeholder="Fecha" value="{{fecha}}" id="fecha">
+            <label for="fecha" class="text-white">Fecha:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="tipo" class="form-control bg-secondary text-white" id="tipo" placeholder="Tipo" class="text-white">
+            <label for="tipo" class="text-white">Tipo:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="serie" class="form-control bg-secondary text-white" id="serie" placeholder="Serie" class="text-white">
+            <label for="serie" class="text-white">Serie:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="marca" class="form-control bg-secondary text-white" id="marca" placeholder="Marca">
+            <label for="marca" class="text-white">Marca:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="referencia" class="form-control bg-secondary text-white" id="referencia" placeholder="Referencia">
+            <label for="referencia" class="text-white">Referencia:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="sistema_operativo" class="form-control bg-secondary text-white" id="sistema_operativo" placeholder="Sistema Operativo">
+            <label for="sistema_operativo" class="text-white">Sistema Operativo:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="id_sistema_operativo" class="form-control bg-secondary text-white" id="id_sistema_operativo" placeholder="Id Sistema Operativo">
+            <label for="id_sistema_operativo" class="text-white">Id Sistema Operativo:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="procesador" class="form-control bg-secondary text-white" id="procesador" placeholder="Procesador">
+            <label for="procesador" class="text-white">Procesador:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="disco_duro" class="form-control bg-secondary text-white" id="disco_duro" placeholder="Disco Duro">
+            <label for="disco_duro" class="text-white">Disco Duro:</label>
+        </div>
+        <div class="col-md-4 form-floating">
+            <input type="text" name="ram" class="form-control bg-secondary text-white" id="ram" placeholder="Ram">
+            <label for="ram" class="text-white">Ram:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="ip" class="form-control bg-secondary text-white" id="ip" placeholder="Ip">
+            <label for="ip" class="text-white">Ip:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="office" value="MICROSOFT OFFICE " class="form-control bg-secondary text-white" id="office" placeholder="Office">
+            <label for="office" class="text-white">Office:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="id_office" class="form-control bg-secondary text-white" id="id_office" placeholder="Id Office">
+            <label for="id_office" class="text-white">Id Office:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <textarea name="observaciones" id="observaciones" class="form-control bg-secondary text-white" placeholder="Observaciones"></textarea>
+            <label for="observaciones" class="text-white">Observaciones:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <textarea class="form-control bg-secondary text-white" name="elementos" placeholder="Elementos" id="elementos"></textarea>
+            <label for="elementos" class="text-white">Elementos:</label>
+        </div>
+        <div class="col-md-4">
+            <label for="checkbox_office">Licenciado:</label>
+            <label class="labels form-check-label">
+                <input type="checkbox" class="inpCheckbox mt-0 form-check-input" name="licenciado" id="checkbox_office">
+                <span class="checkbox"></span>
+            </label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="/equipos/" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</a>
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </div>
+</form>

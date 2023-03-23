@@ -1,0 +1,113 @@
+<div class="row text-center pt-2">
+    <h2 class="h1">Mantenimiento de equipos</h2>
+</div>
+
+<form action="/mantenimiento/equipos/editar/{{equipo.id}}" method="post" class="container-fluid pt-3">
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="area" class="form-control bg-secondary text-white" id="area"
+                value="{{equipo.area}}" placeholder="Area">
+            <label for="area" class="text-white">Area:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="responsable" class="form-control bg-secondary text-white"
+                value="{{equipo.responsable}}" id="responsable" placeholder="Responsable">
+            <label for="responsable" class="text-white">Responsable:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="date" class="form-control bg-secondary text-white" name="fecha" value="{{equipo.fecha}}"
+                placeholder="Fecha" id="fecha">
+            <label for="fecha" class="text-white">Fecha:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <textarea class="form-control bg-secondary text-white" name="falla_inconveniente"
+                placeholder="Falla o Iconveniente" id="falla_inconveniente">{{equipo.falla_inconveniente}}</textarea>
+            <label for="falla_inconveniente" class="text-white">Falla o Iconveniente:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="serie" class="form-control bg-secondary text-white" id="serie"
+                value="{{equipo.serie}}" placeholder="Serie">
+            <label for="serie" class="text-white">Serie:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="marca" class="form-control bg-secondary text-white" id="marca"
+                value="{{equipo.marca}}" placeholder="Marca">
+            <label for="marca" class="text-white">Marca:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="referencia" class="form-control bg-secondary text-white" id="referencia"
+                value="{{equipo.referencia}}" placeholder="Referencia">
+            <label for="referencia" class="text-white">Referencia:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="sistema_operativo" class="form-control bg-secondary text-white"
+                value="{{equipo.sistema_operativo}}" id="sistema_operativo" placeholder="Sistema Operativo">
+            <label for="sistema_operativo" class="text-white">Sistema Operativo:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="id_sistema_operativo" class="form-control bg-secondary text-white"
+                id="id_sistema_operativo" value="{{equipo.id_sistema_operativo}}" placeholder="Id Sistema Operativo">
+            <label for="id_sistema_operativo" class="text-white">Id Sistema Operativo:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="procesador" class="form-control bg-secondary text-white" id="procesador"
+                value="{{equipo.procesador}}" placeholder="Procesador">
+            <label for="procesador" class="text-white">Procesador:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="disco_duro" class="form-control bg-secondary text-white" id="disco_duro"
+                value="{{equipo.disco_duro}}" placeholder="Disco Duro">
+            <label for="disco_duro" class="text-white">Disco Duro:</label>
+        </div>
+        <div class="col-md-4 form-floating">
+            <input type="text" name="ram" class="form-control bg-secondary text-white" id="ram" placeholder="Ram"
+                value="{{equipo.ram}}">
+            <label for="ram" class="text-white">Ram:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="ip" class="form-control bg-secondary text-white" id="ip" placeholder="Ip"
+                value="{{equipo.ip}}">
+            <label for="ip" class="text-white">Ip:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="office" class="form-control bg-secondary text-white" id="office"
+                value="{{equipo.office}}" placeholder="Office">
+            <label for="office" class="text-white">Office:</label>
+        </div>
+        <div class="col-md-4 form-floating mb-2">
+            <input type="text" name="id_office" class="form-control bg-secondary text-white" id="id_office"
+                value="{{equipo.id_office}}" placeholder="Id Office">
+            <label for="id_office" class="text-white">Id Office:</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-floating mb-2">
+            <textarea name="observaciones" id="observaciones" class="form-control bg-secondary text-white" bg-secondary
+                text-white placeholder="Observaciones">{{equipo.observaciones}}</textarea>
+            <label for="observaciones" class="text-white">Observaciones:</label>
+        </div>
+        <div class="col-md-4">
+            <label for="checkbox_office">Licenciado:</label>
+            <label class="labels form-check-label">
+                <input type="checkbox" class="inpCheckbox mt-0 form-check-input" name="licenciado" id="checkbox_office"
+                    {{#if (ifCond equipo.licenciado)}}checked{{/if}}>
+                <span class="checkbox"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="modal-footer">
+            <a href="/mantenimiento/equipos/" class="btn btn-primary">Cancelar</a>
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,67 @@
+div.dataTables_wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #333333 inset !important;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.card-img {
+    height: 16rem;
+    width: 16rem;
+}
+
+.scroll {
+    max-height: 18rem;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #666;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 50px;
+}
+
+.labels {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.inpCheckbox {
+    position: relative;
+    transform: scale(0);
+}
+
+input:checked ~ .checkbox {
+    transform: rotate(45deg);
+    width: 20px;
+    margin-left: 16px;
+    border-color: #24c78e;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-radius: 0;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 215px;
+    height: 30px;
+    border: 3px solid #929292;
+    border-radius: 6px;
+    transition: all .375s;
+}

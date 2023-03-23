@@ -1,0 +1,71 @@
+<div class="row text-center pt-2">
+    <h2 class="h1">Mantenimiento de elementos
+</div>
+
+<div class="row">
+    <div class="col-md-4 pt-3">
+        <div class="card text-center" style="height: 18rem;">
+            <div class="card-body">
+                <a href="/mantenimiento/elementos/nuevo">
+                    <img src="/img/add.png" alt="añadir" class="card-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    {{#each elementos}}
+    <!-- Modal -->
+    <div class="modal fade" id="m{{id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Area: {{area}} <br>
+                    Responsable: {{responsable}} <br>
+                    Fecha: {{fecha}} <br>
+                    Tipo: {{tipo}} <br>
+                    Serie: {{serie}} <br>
+                    Marca: {{marca}} <br>
+                    Referencia: {{referencia}} <br>
+                    Observaciones: {{observaciones}} <br>
+                    ¿Esta seguro que lo desea eliminar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <a href="/mantenimiento/elementos/eliminar/{{id}}" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <div class="col-md-4 pt-3">
+        <div class="card text-center" style="height: 18rem;">
+            <div class="card-body scroll">
+                Area: {{area}} <br>
+                Responsable: {{responsable}} <br>
+                Fecha: {{fecha}} <br>
+                Tipo: {{tipo}} <br>
+                Serie: {{serie}} <br>
+                Marca: {{marca}} <br>
+                Referencia: {{referencia}} <br>
+                Observaciones: {{observaciones}}
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-evenly">
+                    <a href="/mantenimiento/elementos/editar/{{id}}" class="btn btn-primary">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#m{{id}}">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

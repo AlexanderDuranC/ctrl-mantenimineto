@@ -1,0 +1,13 @@
+{{#if errors}}
+<div class="alert alert-danger alert-dismissible fade show col-md-4 mx-auto" role="alert">
+    {{errors}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+{{#if success}}
+<div class="alert alert-success alert-dismissible fade show mx-auto col-md-4" role="alert">
+    {{success}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}

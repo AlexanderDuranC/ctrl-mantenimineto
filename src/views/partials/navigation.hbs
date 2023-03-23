@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/equipos">Inventario</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Mantenimiento
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a href="/mantenimiento/equipos" class="dropdown-item">Equipos</a>
+        </li>
+            <li><a class="dropdown-item" href="/mantenimiento/elementos">Elementos</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Exportar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/equipos/exportar">Equipos (Excel)</a></li>
+            <li><a class="dropdown-item" href="/mantenimiento/equipos/exportar">Mtto. de Equipos (Excel)</a></li>
+            <li><a class="dropdown-item" href="/mantenimiento/elementos/exportar">Mtto. de Elementos (Excel)</a></li>
+            <li><a class="dropdown-item" href="/copiaBd">Copia BD</a></li>
+          </ul>
+        </li>
+      </ul>
+      {{#if equip}}
+      <form action="/mantenimiento/equipos/buscar" method="post" class="d-flex">
+      {{else if mante}}
+      <form action="/mantenimiento/elementos/buscar" method="post" class="d-flex">
+      {{else}}
+      <form action="/equipos/buscar" method="post" class="d-flex">
+      {{/if}}
+        <input class="form-control me-2 bg-secondary text-white" type="search" name="valor" placeholder="Buscar" aria-label="Buscar">
+        <select class="form-select me-2 bg-secondary text-white" name="condicion" aria-label="Seleccion">
+          <option selected value="area">Area</option>
+          <option value="responsable">Responsable</option>
+          <option value="marca">Marca</option>
+        </select>
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
