@@ -5,11 +5,12 @@ usando las tecnologias de javascript, para frontend, backend y base de datos
 # Instalacion como servicio
 Se puede instalar como un servicio para su uso en una red local
 
+![](docs/Screenshot.png)
+
+
 ```bash
 $ npm run service
 ```
-
-![](docs/Screenshot.png)
 
 # Tecnologias usadas
 - Nodejs
